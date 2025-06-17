@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clan-Caiman es un pagina que describe los principios y valores del clan de codificadores caiman">
+    <meta name="keywords" content="coder, develop, caln caima, riwi">
+    <meta name="author" content="Yoshira Barros">
+    <title>Clan Caiman - Codificadoes Unidos</title>
+    <link rel="icon" type="image/png" href="/src/icon/ChatGPT_Image_17_jun_2025_02_20_52_p.m..png">
+    <link rel="stylesheet" href="src/css/stiles.css">
+    
+</head>
+<body>
+    <header>
+        <img src="/src/icon/ChatGPT_Image_17_jun_2025_02_20_52_p.m..png" alt="Caiman Logo">
+        <div>
+            <h1>Clan Caimán</h1>
+            <p>Codificadores Unidos</p>
+            <nav>
+                <a href="#mision">Misión</a>
+                <a href="#vision">Visión</a>
+                <a href="#valores">Valores</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <section>
+            <img src="/src/img/IMG_3460.jpg" alt="Group phto">
+        </section>
+        <section id="mision">
+            <h2> Misión</h2>
+            <p>
+          Nuestra misión en el Clan Caimán es construir una comunidad sólida y vibrante de codificadores estudiantes apasionados por la tecnología. Buscamos fomentar el aprendizaje colectivo a través del apoyo mutuo, la colaboración continua y el intercambio de conocimientos sin barreras. 
+          Promovemos un entorno donde cada miembro se sienta motivado a crecer, a cometer errores sin miedo y a superarse día a día como desarrollador y como ser humano. Nos impulsa el deseo de vernos avanzar juntos, enfrentando desafíos con creatividad, compañerismo y la certeza de que siempre habrá alguien dispuesto a ayudar.</p>
+          </section>
+      
+          <section id="vision">
+        <h2> Visión</h2>
+        <p>
+          Visualizamos al Clan Caimán como un referente de excelencia, unidad y superación en el mundo del desarrollo estudiantil. Aspiramos a convertirnos en una red reconocida por su ética, su talento colectivo y su espíritu solidario. 
+          Imaginamos un futuro donde antiguos y nuevos miembros se formen como programadores íntegros, líderes positivos y agentes de cambio, dejando huella no solo en la industria tecnológica, sino también en sus comunidades. Queremos ser la chispa que encienda vocaciones, despierte sueños y demuestre que el código puede transformar vidas, sobre todo cuando se comparte desde el corazón.
+        </p>
+      </section>
+
+    </main>
+    
+
+    <section id="valores">
+        <h2> Valores</h2>
+        <ul>
+          <li> Apoyo mutuo y compañerismo</li>
+          <li>Intercambio libre de conocimiento</li>
+          <li> Superación constante</li>
+          <li>Competencia sana</li>
+          <li> Pasión por la tecnología</li>
+          <li> Liderazgo colaborativo</li>
+        </ul>
+      </section>
+  
+      <section>
+        <h2>Mensaje motivador</h2>
+        <p id="mensajeMotivador">Haz clic abajo para inspirarte.</p>
+        <button onclick="mostrarMensaje()"> Dame motivación</button>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2025 Clan Caimán. Todos los derechos reservados.</p>
+    </footer>
+  
+    <script src="src/JS/main.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
