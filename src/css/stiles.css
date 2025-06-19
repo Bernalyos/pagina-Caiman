@@ -1,0 +1,27 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique; /* O italic */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /*color de fondo de la pagina*/
+    color: #1d1c1c; /*color de la letra*/
+    line-height: 1.6;/*espacios entre las lineas */
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #4a884f;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header img{
+width: 10%;
+height: 20%;
+}
+
+main section img{
+    max-width: 100%;
+}
