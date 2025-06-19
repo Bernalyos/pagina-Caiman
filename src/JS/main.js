@@ -1,4 +1,4 @@
-//alert('¡Bienvenido al Clan Caimán! Juntos somos más fuertes');
+alert('¡Bienvenido al Clan Caimán! Juntos somos más fuertes');
 const mensajes = [
     "¡Eres capaz de lograr todo lo que te propongas!",
     "¡El código es tu superpoder! ",
