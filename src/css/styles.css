@@ -1,0 +1,237 @@
+/*Fuentes para la pagina*/
+@font-face {
+  font-family: Monserat;
+  src: url(/src/assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+/*Variables*/
+:root {
+  --colorFondo: #b8e78d86;
+  --colorBaseFuente: #1d1c1c;
+  --colorHeader: #17702ec2;
+  --colorSecciones: white;
+  --colorGrid:    #17702ec2;
+  --sombras: rgba(202, 90, 62, 0.685);
+}
+
+/*Estilos generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*AVERIGUAR*/
+
+  font-family: Monserat;
+  font-style: oblique;
+}
+
+body {
+  background-color: var(--colorFondo);
+  color: var(--colorBaseFuente);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+
+  padding: 1%;
+
+  background-color: var(--colorHeader);
+  color: white;
+}
+
+.logo {
+  width: 5%;
+  height: 5%;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+nav ul li a:hover {
+  color: #327ceb;
+}
+
+section {
+  padding: 1%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--colorSecciones);
+  border-radius: 10px;
+}
+
+#inicio {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#inicio img {
+  padding: 2rem 0;
+  max-width: 100%;
+}
+
+#nosotros {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 10px;
+  max-width: 45%;
+  background-color: var(--colorGrid);
+
+  border-radius: 10px;
+}
+
+.tarjeta {
+  display: flex;
+  justify-items: center;
+  padding: 0.8em;
+  justify-content: center;
+}
+
+.tarjeta img {
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--sombras);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#mision,
+#vision {
+  padding: 20px;
+  max-width: 85%;
+  background-color: white;
+  border-radius: 10px;
+  margin: 1rem auto;
+}
+
+.valores-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.valores1 {
+  background-color: white;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.valores1:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 12px 30px rgba(18, 47, 141, 0.678);
+}
+
+#mensaje {
+  padding: 1rem;
+  max-width: 35%;
+  background-color: white;
+  border-radius: 10px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #1e3d59;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.servicios1 {
+  background-color: white;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+form {
+    background-color:#17702ec2;/*coor de fondo*/
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;/*redondea los bordes*/
+    box-shadow: 0 4px 10px rgba(211, 71, 71, 0.685);/*sombra sutil debajo del formulario*/
+    display: flex;/*usa felbox para el diseño interno*/
+    flex-direction: column;/*acomoda los elementos en columnas*/
+    gap: 15px;/*espacio entre los elementos*/
+}
+/*estilo  para las etiquetas de los campso del formulario*/
+form label {
+    color: #1a1a1b;
+    border-radius: 25px;
+}
+/*estilo para el area textarea*/
+form textarea {
+    min-height: 50px;
+    border-radius: 25px;
+    
+}
+/*estilo para el boton de envio*/
+input[type="submit"] {
+    background-color: rgb(166, 94, 184);
+    color: rgb(20, 20, 20);
+    font-size: 15px;
+    border-radius: 15px;
+    
+    
+}
+/*efecto hover para el input , escala al pasar el maus*/
+input:hover{
+    transform: scale(1.2);
+    box-shadow: 0 12px 30px rgba(18, 47, 141, 0.678) ;
+}
+
+footer {
+  background-color: #17702ec2;
+  /*color de fonod del header*/
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
