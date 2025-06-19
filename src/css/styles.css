@@ -6,7 +6,7 @@
 
 /*Variables*/
 :root {
-  --colorFondo: #b8e78d86;
+  --colorFondo: #b9e690b9;
   --colorBaseFuente: #1d1c1c;
   --colorHeader: #17702ec2;
   --colorSecciones: white;
@@ -18,8 +18,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*AVERIGUAR*/
-
+  box-sizing: border-box;
   font-family: Monserat;
   font-style: oblique;
 }
@@ -28,19 +27,17 @@ body {
   background-color: var(--colorFondo);
   color: var(--colorBaseFuente);
 }
-
+/*Estilos de la cabezera*/
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-
   padding: 1%;
-
   background-color: var(--colorHeader);
   color: white;
 }
-
+/*estilos del logo*/
 .logo {
   width: 5%;
   height: 5%;
@@ -61,53 +58,60 @@ nav {
 nav ul {
   display: flex;
   flex-direction: row;
-
   gap: 1rem;
   list-style: none;
 }
-
+/*estilos dle nav*/
 nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
   font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
-
+/*transicición al pasar el maus*/
 nav ul li a:hover {
   color: #327ceb;
 }
-
+/*estilos de la secciones*/
 section {
   padding: 1%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  background-color: var(--colorSecciones);
-  border-radius: 10px;
 }
 
-#inicio {
-  padding: 2rem 0;
-  text-align: center;
-}
 
-#inicio img {
-  padding: 2rem 0;
-  max-width: 100%;
-}
+  /*estilos del inicio */
+  #inicio {
+    text-align: center;
+    background: linear-gradient(#e0ffe0, #ffffff);
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
 
-#nosotros {
-  display: flex;
-  justify-content: center;
-}
+  #inicio h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
+  #inicio p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+  }
+/*estilar la imagen del inicio*/
+  #inicio img {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  /*estilo de la galeria de fotos*/
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border: 10px;
-  max-width: 45%;
+  max-width: 50%;
   background-color: var(--colorGrid);
 
   border-radius: 10px;
@@ -127,16 +131,17 @@ section {
   box-shadow: 0 0 20px var(--sombras);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-
+/*estilo de la seccion mision y vision */
 #mision,
 #vision {
   padding: 20px;
   max-width: 85%;
-  background-color: white;
+  background: linear-gradient(#e0ffe0, #ffffff);
   border-radius: 10px;
   margin: 1rem auto;
 }
 
+/*estilo de la seción de valores */
 .valores-grid {
   padding: 20px;
   display: grid;
@@ -147,7 +152,7 @@ section {
 }
 
 .valores1 {
-  background-color: white;
+  background: linear-gradient(#e0ffe0, #ffffff);
   flex-direction: column;
   padding: 1rem;
   border-radius: 1rem;
@@ -155,83 +160,153 @@ section {
 
 .valores1:hover {
   transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 12px 30px rgba(18, 47, 141, 0.678);
+  box-shadow: 0 12px 30px rgba(50, 122, 28, 0.678);
 }
-
+/*Estilos de la sección de mensaje de motivación*/
 #mensaje {
   padding: 1rem;
   max-width: 35%;
-  background-color: white;
+  background-color: #e0ffe0;
   border-radius: 10px;
   margin: 1rem auto;
   text-align: center;
 }
-
+/*estilos del boton */
 button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #1e3d59;
+  background-color: #125523;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-
+/*estilo a la seccion de los servicios y propuesta*/
+#servicios {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 90%;
+}
+/*grid aplicados */
 .grid-servicios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
   gap: 2rem;
-  align-items: center;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.servicios1 {
-  background-color: white;
-  flex-direction: column;
-  padding: 1rem;
+.servicio-card {
+  background-color: #e0ffe0;
+  padding: 1.5rem;
   border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-form {
-    background-color:#17702ec2;/*coor de fondo*/
-    width: 80%;
-    text-align: center;
-    border-radius: 10px;/*redondea los bordes*/
-    box-shadow: 0 4px 10px rgba(211, 71, 71, 0.685);/*sombra sutil debajo del formulario*/
-    display: flex;/*usa felbox para el diseño interno*/
-    flex-direction: column;/*acomoda los elementos en columnas*/
-    gap: 15px;/*espacio entre los elementos*/
+.servicio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
-/*estilo  para las etiquetas de los campso del formulario*/
-form label {
-    color: #1a1a1b;
-    border-radius: 25px;
+
+.servicio-card h3 {
+  color: #17702e;
+  margin-bottom: 0.5rem;
 }
-/*estilo para el area textarea*/
-form textarea {
-    min-height: 50px;
-    border-radius: 25px;
-    
+
+.servicio-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
-/*estilo para el boton de envio*/
-input[type="submit"] {
-    background-color: rgb(166, 94, 184);
-    color: rgb(20, 20, 20);
-    font-size: 15px;
-    border-radius: 15px;
-    
-    
+
+.servicio-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  text-align: left;
 }
-/*efecto hover para el input , escala al pasar el maus*/
-input:hover{
-    transform: scale(1.2);
-    box-shadow: 0 12px 30px rgba(18, 47, 141, 0.678) ;
-}
+
+  /* Formulario */
+  form {
+    background-color: #e0ffe0;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+  }
+
+  form h3 {
+    margin-bottom: 1rem;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  form input[type="submit"] {
+    background-color: #17702e;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  form input[type="submit"]:hover {
+    background-color: #125523;
+  }
 
 footer {
   background-color: #17702ec2;
-  /*color de fonod del header*/
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .grid, .valores-grid, .grid-servicios {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+
+  form {
+    max-width: 95%;
+  }
+
+  #mensaje {
+    max-width: 90%;
+  }
+
+  .logo {
+    width: 15%;
+  }
 }
